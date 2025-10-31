@@ -35,4 +35,4 @@ Welcome! This repository contains my personal projects demonstrating algorithmic
 - **Repo/Folder:** `mst_or_pathfinding/`
 
 ---
-- Email: your.email@example.com
+- Email: owennyoungblood@icloud.com
