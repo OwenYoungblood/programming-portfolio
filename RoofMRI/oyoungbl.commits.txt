@@ -1,0 +1,203 @@
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400   1) import { Pressable, StyleSheet, Alert, View } from 'react-native';
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400   3) import { Ionicons } from '@expo/vector-icons';
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  38)     <ThemedView style={styles.container}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  39)       <ThemedView style={styles.contentContainer}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  40)         <ThemedView style={styles.titleWrapper}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  41)           <ThemedText type='title' style={styles.mainTitle}>Still Need Help?</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  42)           <ThemedText type='default' style={styles.subtitle}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  43)             Contact us about any questions you have!
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  44)           </ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  45)         </ThemedView>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  46)         
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  47)         <ThemedView style={styles.contactInfo}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  48)           <ThemedText type='defaultSemiBold' style={styles.contactLabel}>Contact Information:</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  49)           <ThemedText style={styles.contactDetail}>📧 adam@re-dry.com</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  50)           <ThemedText style={styles.contactDetail}>📞 (865) 454-1166</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  51)         </ThemedView>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  53)         <ThemedView style={styles.buttonContainer}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  54)           <Pressable onPress={handleEmail} style={[styles.button, styles.emailButton]}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  55)             <View style={styles.buttonContent}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  56)               <Ionicons name="mail" size={24} color="white" />
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  57)               <ThemedText type="link" style={styles.buttonText}>Email Question</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  58)             </View>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  59)           </Pressable>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  60)           
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  61)           <Pressable onPress={handleCall} style={[styles.button, styles.callButton]}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  62)             <View style={styles.buttonContent}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  63)               <Ionicons name="call" size={24} color="white" />
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  64)               <ThemedText type="link" style={styles.buttonText}>Call For Help</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  65)             </View>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  66)           </Pressable>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  67)         </ThemedView>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  69)     </ThemedView>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  74)   container: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  75)     flex: 1,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  76)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  77)   contentContainer: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  78)     flex: 1,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  79)     padding: 20,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  80)     paddingTop: 60,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  81)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  83)     marginTop: 0,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  84)     marginBottom: 40,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  88)   mainTitle: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  89)     fontSize: 28,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  90)     fontWeight: 'bold',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  91)     textAlign: 'center',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  92)     marginBottom: 12,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  93)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  94)   subtitle: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  95)     fontSize: 16,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  96)     textAlign: 'center',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  97)     opacity: 0.8,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  98)     paddingHorizontal: 20,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  99)     lineHeight: 22,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 100)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 101)   contactInfo: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 102)     backgroundColor: 'rgba(255, 255, 255, 0.1)',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 103)     borderRadius: 12,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 104)     padding: 20,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 105)     marginBottom: 30,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 107)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 108)   contactLabel: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 109)     fontSize: 18,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 110)     marginBottom: 12,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 111)     textAlign: 'center',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 112)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 113)   contactDetail: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 114)     fontSize: 16,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 115)     marginBottom: 8,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 116)     textAlign: 'center',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 117)     opacity: 0.9,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 118)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 119)   buttonContainer: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 120)     gap: 16,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 121)     paddingHorizontal: 10,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 124)     paddingVertical: 16,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 126)     borderRadius: 12,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 127)     elevation: 3,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 128)     shadowColor: '#000',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 129)     shadowOffset: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 130)       width: 0,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 131)       height: 2,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 132)     },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 133)     shadowOpacity: 0.25,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 134)     shadowRadius: 3.84,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 135)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 136)   emailButton: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 139)   callButton: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 140)     backgroundColor: "#28a745",
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 142)   buttonContent: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 143)     flexDirection: 'row',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 145)     justifyContent: 'center',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 146)     gap: 10,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 147)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 148)   buttonText: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 149)     color: 'white',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 150)     fontSize: 18,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 151)     fontWeight: '600',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  47)       <ThemedView style={styles.videoSection}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  48)         <ThemedText type="subtitle" style={styles.videoTitle}>Setting Up Equipment</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  54)           Learn how to set up the devices.
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  56)       </ThemedView>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  57) 
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  58)       <ThemedView style={styles.videoSection}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  59)         <ThemedText type="subtitle" style={styles.videoTitle}>Calibration</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  65)           Learn how to calibrate the devices.
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  67)       </ThemedView>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  68) 
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  69)       <ThemedView style={styles.videoSection}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  70)         <ThemedText type="subtitle" style={styles.videoTitle}>Scanning</ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  75)         <ThemedText style={styles.textBelowVideo}>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  76)           Learn how to Scan with the devices.
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  77)         </ThemedText>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  78)       </ThemedView>
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  91)   videoSection: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  92)     marginBottom: 40,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  93)     width: '100%',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  94)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  95)   videoTitle: {
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  96)     fontSize: 24,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  97)     fontWeight: 'bold',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  98)     marginBottom: 16,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400  99)     textAlign: 'center',
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 100)   },
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 102)     height: 250,               // Fixed height for block
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 104)     marginVertical: 10,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 111)     width: 300,                // smaller video width
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 112)     height: 200,               // smaller video height
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 117)     marginTop: 16,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 118)     marginBottom: 10,
+7af83de3 (Owen Youngblood 2025-10-14 20:53:19 -0400 122)     fontSize: 23,609db79b 
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 11) import { Colors } from '@/constants/theme';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 35)             drawerActiveBackgroundColor: colorScheme === 'dark' ? '#2a2a2a' : '#def1ffff',
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 36)             drawerActiveTintColor: Colors[colorScheme ?? 'light'].text,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 37)             drawerInactiveTintColor: Colors[colorScheme ?? 'light'].icon,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  11) import { useColorScheme } from '@/hooks/use-color-scheme';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  12) import { Colors } from '@/constants/theme';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  16)   const colorScheme = useColorScheme();
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  66)         <CenteredTitle>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  79)               style={[
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  80)                 styles.linkContainer,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  81)                 { 
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  82)                   backgroundColor: Colors[colorScheme ?? 'light'].background,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  83)                   borderColor: colorScheme === 'dark' ? '#444' : '#ddd',
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  84)                 }
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  85)               ]}
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 100)               style={[
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 101)                 styles.linkContainer,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 102)                 { 
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 103)                   backgroundColor: Colors[colorScheme ?? 'light'].background,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 104)                   borderColor: colorScheme === 'dark' ? '#444' : '#ddd',
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 105)                 }
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 106)               ]}
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 148)     opacity: 0.7,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400   7) import { useColorScheme } from '@/hooks/use-color-scheme';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  10)   const colorScheme = useColorScheme();
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  11)           
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  50)         <ThemedView style={[
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  51)           styles.contactInfo,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  52)           { backgroundColor: colorScheme === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.1)' }
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  53)         ]}>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400   7) import { useColorScheme } from '@/hooks/use-color-scheme';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400   8) import { Colors } from '@/constants/theme';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400   9) import { ColorSchemeName } from 'react-native';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  14)   colorScheme: ColorSchemeName;
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  17) function ExampleVideo({ title, url, colorScheme }: ExampleVideoProps) {
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  19)     <View style={[
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  20)       styles.videoBlock,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  21)       { backgroundColor: colorScheme === 'dark' ? '#2a2a2a' : '#212121ff' }
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  22)     ]}>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  28)         style={[
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  29)           styles.video,
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  30)           { backgroundColor: colorScheme === 'dark' ? '#1a1a1a' : '#1f1f1fff' }
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  31)         ]}
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  42)   const colorScheme = useColorScheme();
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  43)   
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  69)           colorScheme={colorScheme}
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  83)           colorScheme={colorScheme}
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  97)           colorScheme={colorScheme}
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  3) import { useThemeColor } from '@/hooks/use-theme-color';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  9)   lightColor?: string;
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 10)   darkColor?: string;
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 13) export default function CenteredTitle({ children, style, numberOfLines, lightColor, darkColor }: CenteredTitleProps) {
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 14)   const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 15)   
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 20)       style={[styles.title, { color }, style]}
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400   6) import { useColorScheme } from '@/hooks/use-color-scheme';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400   7) import { Colors } from '@/constants/theme';
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  24)   const colorScheme = useColorScheme();
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  43)       <View style={[styles.popover, { backgroundColor: Colors[colorScheme ?? 'light'].background }]}>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  45)         <View style={[styles.arrow, { borderBottomColor: Colors[colorScheme ?? 'light'].background }]} />
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  61)       <View style={[styles.popover, { backgroundColor: Colors[colorScheme ?? 'light'].background }]}>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  63)         <View style={[styles.arrow, { borderBottomColor: Colors[colorScheme ?? 'light'].background }]} />
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  80)       <View style={[styles.arrow, { borderBottomColor: Colors[colorScheme ?? 'light'].background }]} />
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  83)       <View style={[styles.content, { backgroundColor: Colors[colorScheme ?? 'light'].background }]}>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  84)         <Text style={[styles.title, { color: Colors[colorScheme ?? 'light'].text }]}>Welcome to RoofMRI</Text>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400  85)         <Text style={[styles.subtitle, { color: Colors[colorScheme ?? 'light'].icon }]}>Choose an option to continue</Text>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 104)           <Text style={[styles.closeText, { color: Colors[colorScheme ?? 'light'].icon }]}>Close</Text>
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 18)         contentContainerStyle={{ 
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 19)           backgroundColor: Colors[colorScheme ?? 'light'].background, 
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 20)           flex: 1 
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 21)         }}
+de6af58b (Owen Youngblood 2025-10-15 13:50:19 -0400 32)           labelStyle={{ color: Colors[colorScheme ?? 'light'].text }}
