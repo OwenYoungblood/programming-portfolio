@@ -35,7 +35,7 @@ Welcome! This repository contains my personal projects demonstrating algorithmic
 - **Folder:** `hash_factor/`
 
 ### 7. Sockets (C)
-- **Description:** Client and Server side socket implementation
+- **Description:** Client and Server side socket implementation.
 - **Skills Highlighted:** Sockets programming, UNIX and internet socket types, C.
 - **Folder:** `sockets/` 
 
