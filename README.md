@@ -34,5 +34,10 @@ Welcome! This repository contains my personal projects demonstrating algorithmic
 - **Skills Highlighted:** Fork/exec, IPC, process synchronization, parallel computation, C.
 - **Folder:** `hash_factor/`
 
+### 7. Sockets (C)
+- **Description:** Client and Server side socket implementation
+- **Skills Highlighted:** Sockets programming, UNIX and internet socket types, C.
+- **Folder:** `sockets/` 
+
 ---
 - Email: owennyoungblood@icloud.com
